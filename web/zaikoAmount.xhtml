@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>在庫数確認</title>
+        <h:outputStylesheet name="mystyle.css" library="css"/>
+        <h:outputStylesheet name="table.css" library="css"/>
+    </h:head>
+    <h:body>
+        <div id="header">
+        <h1>在庫数確認(合計)</h1>
+        </div>
+        <div id="contents">
+        <p class="error"></p>
+        <h:form>
+        <table>
+            <tr>
+                <th class="c1">在庫数</th>
+                <th class="c2">#{zaikoAmountBb.zaikoNum}</th>
+            </tr>
+            <tr>
+                <th class="c1">在庫金額</th>
+                <th class="c2">#{zaikoAmountBb.zaikokingaku}</th>
+            </tr>        
+        </table>
+            <h:commandButton class="inputbutton" action="#{zaikoAmountBb.outputData()}" value="帳票出力"></h:commandButton>
+        </h:form>
+        </div>
+    </h:body>
+</html>
+

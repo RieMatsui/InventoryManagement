@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>ログイン画面</title>
+        <h:outputStylesheet name="mystyle.css" library="css"/>
+    </h:head>
+    <h:body>
+        <div id="header">
+        <h1>ログイン画面</h1>
+        </div>
+        <div id="contents">
+            <h:form id="myForm">
+                <h:message id="dealResult" for="dealResult" style="color : red; font:8px;" ></h:message>
+            <h:panelGrid columns="3" >
+                ユーザーID:&emsp;&emsp;&emsp;&emsp;<h:inputText id="userId" value="#{loginBb.userId}" required="true" label="ユーザーID"></h:inputText>
+                <h:message for="userId" class="error"  errorClass="error"></h:message>
+                パスワード:<h:inputSecret id="userPw" value="#{loginBb.userPassword}" required="true" label="パスワード"></h:inputSecret>
+                <h:message for="userPw" class="error"  errorClass="error"></h:message>
+                <h:inputHidden value="#{loginBb.userName}"></h:inputHidden>          
+            </h:panelGrid>
+            <h:commandButton class="inputbutton" action="#{loginBb.next()}" value="ログイン" />
+        </h:form>     
+        </div>
+    </h:body>
+</html>
+

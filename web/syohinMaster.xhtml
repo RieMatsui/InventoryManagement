@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>商品マスタ登録</title>
+        <h:outputStylesheet name="mystyle.css" library="css"/>
+    </h:head>
+    <h:body>
+        <div id="header">
+            <h1>商品マスタ登録</h1>
+        </div>
+        <div id="contents">
+        <p class="error"></p>
+        <h:form>
+            <h:panelGrid columns="3">
+                商品ID:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <h:inputText  id="syohinMstId" value="#{syohinMstBb.syohinId}"  required="true" label="商品ID"></h:inputText>
+                <h:message for="syohinMstId" errorClass="error"></h:message>
+                分類ID<h:inputText id ="categoryId" value="#{syohinMstBb.categoryId}" required="true" label="分類ID" ></h:inputText>
+                <h:message for="categoryId" errorClass="error"></h:message>
+                商品名<h:inputText id ="syohinName" value="#{syohinMstBb.syohinName}" required="true" label="商品名" ></h:inputText>
+                <h:message for="syohinName" errorClass="error" ></h:message>
+                仕入価格<h:inputText id ="shiirekingaku" value="#{syohinMstBb.shiirekingaku}" required="true" label="仕入価格"></h:inputText>
+                <h:message for="shiirekingaku" errorClass="error"></h:message>
+                売上価格<h:inputText id ="uriagekingaku" value="#{syohinMstBb.uriagekingaku}" required="true" label="売上価格"></h:inputText>
+                <h:message for="uriagekingaku" errorClass="error" ></h:message>
+            </h:panelGrid>
+            <h:commandButton class="inputbutton"  value="登録" action="#{syohinMstBb.createSyohinMstData()}" />
+<!--            <h:commandButton class="inputbutton" action="" value="帳票出力"/>-->
+        </h:form>
+        </div>
+    </h:body>
+</html>
+

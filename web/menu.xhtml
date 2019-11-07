@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>在庫管理</title>
+        <h:outputStylesheet name="menu.css" library="css"/>
+    </h:head>
+    <h:body>
+        <div id="header">
+        <h1>&emsp;&emsp;在庫管理</h1>
+        <h:form id= "myForm">
+            &emsp;&emsp;ようこそ<h:outputText id="userName" value="#{loginBb.userName}"></h:outputText>さん
+        </h:form>
+        </div>
+        <div id="contents">
+        <h:form>
+            <div id="left">
+                <p><h:commandButton class="menubutton" value="商品マスタ登録" action="#{menuBb.goSyohinMaster()}"/></p>
+                <p><h:commandButton class="menubutton" value="分類マスタ登録" action="#{menuBb.goCategoryMaster()}"/></p>
+                <p><h:commandButton class="menubutton" value="仕入データ入力" action="#{menuBb.goShiireDataInput()}"/></p>
+                <p><h:commandButton class="menubutton" value="売上データ入力" action="#{menuBb.goUriageDataInput()}"/></p>
+                
+            </div>
+            <div id="right">
+                <p><h:commandButton class="menubutton" value="在庫確認&#13;&#10;(個別)" action="#{menuBb.goZaikoKobetu()}"/></p>
+                <p><h:commandButton class="menubutton" value="在庫確認&#13;&#10;(全体)" action="#{menuBb.goZaikoAmount()}"/></p>
+            </div>
+        </h:form>     
+        </div>
+    </h:body>
+</html>
+

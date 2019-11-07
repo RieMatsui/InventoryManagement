@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>仕入データ入力</title>
+        <h:outputStylesheet name="mystyle.css" library="css"/>
+    </h:head>
+    <h:body>
+        <div id="header">
+        <h1>仕入データ入力</h1>
+        </div>
+        <div id="contents">
+        <p class="error"></p>
+        <h:form>
+            <h:panelGrid columns="3">
+                商品ID・商品名:&emsp;&emsp;&emsp;
+                <h:selectOneMenu value="#{shiireData.menuber}" styleClass="sel" id="categoryId" required="true" label="商品ID・商品名">
+                    <f:selectItems value="#{shiireData.shohinItems}"/>
+                    <f:ajax event="change" execute="@this"  ></f:ajax>
+                </h:selectOneMenu>
+                <h:messages for="shohinItems" class="error"  errorClass="error"></h:messages>
+                日付:<h:inputText value="#{shiireData.shiireDate}" id="shiireDate" required="true" label="日付">
+                    <f:convertDateTime pattern="yyyy/M/d" timeZone="timeZone=Asia/Tokyo"/>
+                </h:inputText>
+                <h:messages for="shiireDate" class="error"   ></h:messages>
+                入荷個数:<h:inputText value="#{shiireData.nyukaNum}" id="nyukaNum" required="true" label="入荷個数"></h:inputText>            
+                <h:messages for="nyukaNum" class="error"></h:messages>
+            </h:panelGrid>
+            <h:commandButton class="inputbutton" action="#{shiireData.registShiireData()}"  value="登録" />
+        </h:form>     
+        </div>
+    </h:body>
+</html>
+

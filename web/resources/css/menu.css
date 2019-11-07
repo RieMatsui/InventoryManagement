@@ -1,0 +1,76 @@
+/* 
+    Created on : 2017/03/09, 13:31:31
+    Author     : WITC_NP02410A
+　　Common CSS
+*/
+body{
+    font-family: メイリオ,Osaka;
+    font-size: 15pt;
+   
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+#header{
+
+    text-align: center;
+    width: 1400px;
+}
+
+#contents{   
+    margin-left: 450px;
+    width: 600px;
+}
+#right{
+    float: right;
+}
+
+#left{
+    float: left;
+}
+
+.right{
+    
+    margin-right: 100px;
+    
+}
+
+.panel{
+  margin: 0px;
+ 
+}
+
+p{ 
+    line-height: 0px;
+}
+
+.inputbutton{ 
+   height: 30px;
+   width: 100px; 
+   margin-left: 250px;
+}
+
+
+#left .menubutton{
+   
+   height: 50px;
+   width: 300px;
+   border-radius: 10px;
+
+}
+
+#right .menubutton{
+ 
+   height: 120px;
+   width: 250px;
+   border-radius: 10px;
+   
+}
+
+
+.error{
+   font-size: 0.6em;
+   color: red;
+}

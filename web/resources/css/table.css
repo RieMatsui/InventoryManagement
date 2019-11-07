@@ -1,0 +1,22 @@
+/* 
+    Created on : 2017/03/16, 23:22:10
+    Author     : matsuirie
+*/
+table,tr,th{
+    border: solid 1px #aaa;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+    font-size: 14pt;
+   
+}
+
+.c1{
+    width: 200px;
+}
+
+.c2{
+    width:180px;
+}
+
+

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>売上データ入力</title>
+        <h:outputStylesheet name="mystyle.css" library="css"/>
+    </h:head>
+    <h:body>
+        <div id="header">
+        <h1>売上データ入力</h1>
+        </div>
+        <div id="contents">
+        <p class="error"></p>
+        <h:form>
+            <h:panelGrid columns="3">
+                商品ID・商品名:<h:selectOneMenu   value="#{uriageData.menuber}" styleClass="sel" required="true" label="商品ID・商品名">
+                    <f:selectItems id="item" value="#{uriageData.shohinItems}"/>
+                    <f:ajax event="change" execute="@this"></f:ajax>                  
+                </h:selectOneMenu>
+                <h:message for="item" class="error" ></h:message>
+                日付:<h:inputText id="uriageDate" value="#{uriageData.uriageDate}" required="true" label="日付">
+                    <f:convertDateTime pattern="yyyy/M/d" timeZone="timeZone=Asia/Tokyo"/>
+                </h:inputText>
+                <h:message for="uriageDate" class="error" ></h:message>
+                入荷個数:<h:inputText id="uriageNum" value="#{uriageData.uriageNum}" required="true" label="入荷個数"></h:inputText>            
+                <h:message for="uriageNum" class="error" ></h:message>
+            </h:panelGrid>
+            <h:commandButton   class="inputbutton" action="#{uriageData.registUriageData()}"  value="登録" />
+        </h:form>      
+        </div>
+    </h:body>
+</html>
+
