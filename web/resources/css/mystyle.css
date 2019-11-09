@@ -7,18 +7,25 @@
 body{
     font-family: メイリオ,Osaka;
     font-size: 15pt;
-    
 }
 
 h1{
     font-size: 1.5em;
     margin:auto;
+    text-align: center;
+    padding: 10px;
 }
 
 header{
     text-align: center;
-    height: 50px;
-    
+    height: 30px; 
+    padding: 15px;
+    background-color: black;
+    color: white;
+}
+
+header li .logo{
+    float: right;
 }
 
 header li{
@@ -29,62 +36,66 @@ header li{
 
 .contents{
     background-image:url(./img/login/factory.png);
+    background-color: whitesmoke;
     background-repeat: no-repeat;
     max-width: 1280px ;
     height: 597px;
+    padding: 10px;
 }
 
+.login-contents-wrapper{
+    width: 400px;
+    height: 400px;
+    margin:10px auto;
+    background-color:paleturquoise;
+    border-radius: 10px;
+}
+
+.login-contents{
+    text-align: center;
+    padding: 10px;
+    height: 380px;
+}
+
+
 #right{
-    float: right;
-
-
 }
 
 #left{
-    float: left;
-    background-color: blue;
 }
 
 .right{
-    
-    margin-right: 250px;
-    
 }
 
 .panel{
-  margin: 0px;
- 
 }
 
-p{ 
-    line-height: 0px;
+p{
 }
 
-.inputbutton{ 
+form {   
+}
+
+table {
+}
+
+.inputbutton{
    height: 30px;
    width: 100px; 
-   margin-left: 300px;
    border-radius: 5px;
 }
 
-
 #left .menubutton{
-   
    height: 50px;
    width: 250px;
    border-radius: 10px;
-   
-
 }
 
 #right .menubutton{
- 
    height: 120px;
    width: 150px;
-   border-radius: 10px;
-   
+   border-radius: 10px; 
 }
-
 
 .error{
    font-size: 0.7em;

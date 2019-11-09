@@ -6,8 +6,6 @@
 body{
     font-family: メイリオ,Osaka;
     font-size: 15pt;
-    width: auto;
-    height: auto;
    
 }
 
@@ -16,7 +14,6 @@ h1{
 }
 
 #header{
-
     text-align: center;
     width: 1400px;
 }
