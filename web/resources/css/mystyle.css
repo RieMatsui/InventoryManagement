@@ -7,7 +7,7 @@
 body{
     font-family: メイリオ,Osaka;
     font-size: 15pt;
-   
+    
 }
 
 h1{
@@ -15,16 +15,25 @@ h1{
     margin:auto;
 }
 
-#header{
-
+header{
     text-align: center;
-    width: 1300px;
+    height: 50px;
+    
 }
 
-#contents{   
-    margin-left: 450px;
-    width: 800px; 
+header li{
+    float: right;
+    display: block;
+    width: 100px;
 }
+
+.contents{
+    background-image:url(./img/login/factory.png);
+    background-repeat: no-repeat;
+    max-width: 1280px ;
+    height: 597px;
+}
+
 #right{
     float: right;
 
